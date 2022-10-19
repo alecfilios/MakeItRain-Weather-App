@@ -1,0 +1,14 @@
+/Users/alexandrosfilios/Documents/Xamarin.Forms Apps/Weather App/MakeItRain/MakeItRain/MakeItRain/bin/Debug/netstandard2.0/MakeItRain.deps.json
+/Users/alexandrosfilios/Documents/Xamarin.Forms Apps/Weather App/MakeItRain/MakeItRain/MakeItRain/bin/Debug/netstandard2.0/MakeItRain.dll
+/Users/alexandrosfilios/Documents/Xamarin.Forms Apps/Weather App/MakeItRain/MakeItRain/MakeItRain/bin/Debug/netstandard2.0/ref/MakeItRain.dll
+/Users/alexandrosfilios/Documents/Xamarin.Forms Apps/Weather App/MakeItRain/MakeItRain/MakeItRain/bin/Debug/netstandard2.0/MakeItRain.pdb
+/Users/alexandrosfilios/Documents/Xamarin.Forms Apps/Weather App/MakeItRain/MakeItRain/MakeItRain/obj/Debug/netstandard2.0/MakeItRain.csproj.AssemblyReference.cache
+/Users/alexandrosfilios/Documents/Xamarin.Forms Apps/Weather App/MakeItRain/MakeItRain/MakeItRain/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/alexandrosfilios/Documents/Xamarin.Forms Apps/Weather App/MakeItRain/MakeItRain/MakeItRain/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/alexandrosfilios/Documents/Xamarin.Forms Apps/Weather App/MakeItRain/MakeItRain/MakeItRain/obj/Debug/netstandard2.0/MakeItRain.AssemblyInfoInputs.cache
+/Users/alexandrosfilios/Documents/Xamarin.Forms Apps/Weather App/MakeItRain/MakeItRain/MakeItRain/obj/Debug/netstandard2.0/MakeItRain.AssemblyInfo.cs
+/Users/alexandrosfilios/Documents/Xamarin.Forms Apps/Weather App/MakeItRain/MakeItRain/MakeItRain/obj/Debug/netstandard2.0/MakeItRain.csproj.CoreCompileInputs.cache
+/Users/alexandrosfilios/Documents/Xamarin.Forms Apps/Weather App/MakeItRain/MakeItRain/MakeItRain/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/alexandrosfilios/Documents/Xamarin.Forms Apps/Weather App/MakeItRain/MakeItRain/MakeItRain/obj/Debug/netstandard2.0/MakeItRain.dll
+/Users/alexandrosfilios/Documents/Xamarin.Forms Apps/Weather App/MakeItRain/MakeItRain/MakeItRain/obj/Debug/netstandard2.0/ref/MakeItRain.dll
+/Users/alexandrosfilios/Documents/Xamarin.Forms Apps/Weather App/MakeItRain/MakeItRain/MakeItRain/obj/Debug/netstandard2.0/MakeItRain.pdb

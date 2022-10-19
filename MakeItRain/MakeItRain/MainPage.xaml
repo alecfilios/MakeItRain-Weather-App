@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MakeItRain"
+             x:DataType="local:MainViewModel"
+             x:Class="MakeItRain.MainPage">
+    <!--Main Grid Holding the App Frame the Input and the Buttons-->
+    <Grid BackgroundColor="#39386d">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <!--Frame Containing the App's name and some info-->
+        <Frame  Grid.Row="0" Grid.RowSpan="1" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="#39386d" Padding="24" CornerRadius="0">
+            <StackLayout>
+                <Label Text="Make it Rain" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+                <Label Text="Made by Alexandros Filios for testing purposes" HorizontalTextAlignment="Center" TextColor="White" FontSize="12"/>
+            </StackLayout>
+        </Frame>
+        <!--Entry for the City names to be searched-->
+        <Entry x:Name="CityNameInput"
+               Grid.Row="1"
+               Grid.RowSpan="1"
+               Grid.Column="0"
+               Grid.ColumnSpan="2"
+               Placeholder="Enter a city name..."
+               Text="{Binding CityNameEntryValue}"
+               TextColor="White"
+               PlaceholderColor="White"
+               BackgroundColor="#333644"/>
+        <!--The Enter Button (Clicked="OnClickSearch")-->
+        <Button Grid.Row="1"
+                Grid.RowSpan="1"
+                Grid.Column="2"
+                Grid.ColumnSpan="1"
+                Text="Refresh"
+                Command="{Binding UpdateWeatherInfoCommand}"
+                 />
+        <!--The ScrollView that contains all the information that is retrieved on a Grid-->
+        <ScrollView Grid.Row="2"
+                    Grid.RowSpan="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    BackgroundColor="#39386d"
+                    Margin="5,0">
+            <!--The Second Grid inside the ScrollView-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <!--The Image-->
+                <Image
+                    Grid.Row="0"
+                    Grid.RowSpan="4"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Source="{Binding IconSourceText}"
+                    WidthRequest="90"
+                    HeightRequest="90"
+                    Margin="5"/>
+                <!--Title:City-->
+                <Label
+                       Grid.Row="0"
+                       Grid.RowSpan="1"
+                       Grid.Column="2"
+                       Grid.ColumnSpan="1"
+                       Text="City:"
+                       HorizontalTextAlignment="Start"
+                       TextColor="White"
+                       FontSize="14"
+                       Margin="1,5"/>
+                <!--Value:City-->
+                <Label
+                       x:Name="CityLabel"
+                       Grid.Row="0"
+                       Grid.RowSpan="1"
+                       Grid.Column="3"
+                       Grid.ColumnSpan="1"
+                       Text="{Binding CityLabelText}"
+                       HorizontalTextAlignment="Start"
+                       TextColor="White"
+                       FontSize="14"
+                       Margin="1,5"/>
+                <!--Title:Timezone-->
+                <Label
+                       Grid.Row="1"
+                       Grid.RowSpan="1"
+                       Grid.Column="2"
+                       Grid.ColumnSpan="1"
+                       Text="Timezone:"
+                       HorizontalTextAlignment="Start"
+                       TextColor="White"
+                       FontSize="14"
+                       Margin="1,5"/>
+                <!--Value:Timezone-->
+                <Label
+                       x:Name="TimezoneLabel"
+                       Grid.Row="1"
+                       Grid.RowSpan="1"
+                       Grid.Column="3"
+                       Grid.ColumnSpan="1"
+                       Text="{Binding TimezoneLabelText}"
+                       HorizontalTextAlignment="Start"
+                       TextColor="White"
+                       FontSize="14"
+                       Margin="1,5"/>
+                <!--Title:Latitude-->
+                <Label
+                       Grid.Row="2"
+                       Grid.RowSpan="1"
+                       Grid.Column="2"
+                       Grid.ColumnSpan="1"
+                       Text="Latitude:"
+                       HorizontalTextAlignment="Start"
+                       TextColor="White"
+                       FontSize="14"
+                       Margin="1,5"/>
+                <!--Value:Latitude-->
+                <Label
+                       x:Name="LatitudeLabel"
+                       Grid.Row="2"
+                       Grid.RowSpan="1"
+                       Grid.Column="3"
+                       Grid.ColumnSpan="1"
+                       Text="{Binding LatitudeLabelText}"
+                       HorizontalTextAlignment="Start"
+                       TextColor="White"
+                       FontSize="14"
+                       Margin="1,5"/>
+                <!--Title:Longitude-->
+                <Label
+                       Grid.Row="3"
+                       Grid.RowSpan="1"
+                       Grid.Column="2"
+                       Grid.ColumnSpan="1"
+                       Text="Longitude:"
+                       HorizontalTextAlignment="Start"
+                       TextColor="White"
+                       FontSize="14"
+                       Margin="1,5"/>
+                <!--Value:Longitude-->
+                <Label
+                       x:Name="LongitudeLabel"
+                       Grid.Row="3"
+                       Grid.RowSpan="1"
+                       Grid.Column="3"
+                       Grid.ColumnSpan="1"
+                       Text="{Binding LongitudeLabelText}"
+                       HorizontalTextAlignment="Start"
+                       TextColor="White"
+                       FontSize="14"
+                       Margin="1,5"/>
+                <!--Header:Forecast-->
+                <Label
+                       Grid.Row="4"
+                       Grid.RowSpan="1"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="4"
+                       Text="Forecast"
+                       HorizontalTextAlignment="Center"
+                       TextColor="White"
+                       FontSize="20"
+                       Margin="1,5"/>
+                <!--Title:Condition-->
+                <Label
+                        Grid.Row="5"
+                        Grid.RowSpan="1"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="1"
+                        Text="Condition:"
+                        HorizontalTextAlignment="Start"
+                        TextColor="White"
+                        FontSize="14"
+                        Margin="1,5"/>
+                <!--Value:Condition-->
+                <Label
+                       x:Name="WeatherLabel"
+                       Grid.Row="5"
+                       Grid.RowSpan="1"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="1"
+                       Text="{Binding WeatherLabelText}"
+                       HorizontalTextAlignment="Start"
+                       TextColor="White"
+                       FontSize="14"
+                       Margin="1,5"/>
+                <!--Title:Details-->
+                <Label
+                        Grid.Row="5"
+                        Grid.RowSpan="1"
+                        Grid.Column="2"
+                        Grid.ColumnSpan="1"
+                        Text="Condition:"
+                        HorizontalTextAlignment="Start"
+                        TextColor="White"
+                        FontSize="14"
+                        Margin="1,5"/>
+                <!--Value:Details-->
+                <Label
+                       x:Name="DescriptionLabel"
+                       Grid.Row="5"
+                       Grid.RowSpan="1"
+                       Grid.Column="3"
+                       Grid.ColumnSpan="1"
+                       Text="{Binding DescriptionLabelText}"
+                       HorizontalTextAlignment="Start"
+                       TextColor="White"
+                       FontSize="14"
+                       Margin="1,5"/>
+                <!--Header:Info-->
+                <Label
+                       Grid.Row="6"
+                       Grid.RowSpan="1"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="4"
+                       Text="Forecast"
+                       HorizontalTextAlignment="Center"
+                       TextColor="White"
+                       FontSize="20"
+                       Margin="1,5"/>
+                <!--Title:Temperature-->
+                <Label
+                        Grid.Row="7"
+                        Grid.RowSpan="1"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="1"
+                        Text="Temperature:"
+                        HorizontalTextAlignment="Start"
+                        TextColor="White"
+                        FontSize="14"
+                        Margin="1,5"/>
+                <!--Value:Temperature-->
+                <Label
+                       x:Name="TemperatureLabel"
+                       Grid.Row="7"
+                       Grid.RowSpan="1"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="1"
+                       Text="{Binding TemperatureLabelText}"
+                       HorizontalTextAlignment="Start"
+                       TextColor="White"
+                       FontSize="14"
+                       Margin="1,5"/>
+                <!--Title:FeelsLike-->
+                <Label
+                        Grid.Row="7"
+                        Grid.RowSpan="1"
+                        Grid.Column="2"
+                        Grid.ColumnSpan="1"
+                        Text="Feels Like:"
+                        HorizontalTextAlignment="Start"
+                        TextColor="White"
+                        FontSize="14"
+                        Margin="1,5"/>
+                <!--Value:FeelsLike-->
+                <Label
+                       x:Name="FeelsLikeLabel"
+                       Grid.Row="7"
+                       Grid.RowSpan="1"
+                       Grid.Column="3"
+                       Grid.ColumnSpan="1"
+                       Text="{Binding FeelsLikeLabelText}"
+                       HorizontalTextAlignment="Start"
+                       TextColor="White"
+                       FontSize="14"
+                       Margin="1,5"/>
+                <!--Title:Min-->
+                <Label
+                        Grid.Row="8"
+                        Grid.RowSpan="1"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="1"
+                        Text="Min:"
+                        HorizontalTextAlignment="Start"
+                        TextColor="White"
+                        FontSize="14"
+                        Margin="1,5"/>
+                <!--Value:Min-->
+                <Label
+                       x:Name="MinLabel"
+                       Grid.Row="8"
+                       Grid.RowSpan="1"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="1"
+                       Text="{Binding MinLabelText}"
+                       HorizontalTextAlignment="Start"
+                       TextColor="White"
+                       FontSize="14"
+                       Margin="1,5"/>
+                <!--Title:Max-->
+                <Label
+                        Grid.Row="8"
+                        Grid.RowSpan="1"
+                        Grid.Column="2"
+                        Grid.ColumnSpan="1"
+                        Text="Min:"
+                        HorizontalTextAlignment="Start"
+                        TextColor="White"
+                        FontSize="14"
+                        Margin="1,5"/>
+                <!--Value:Max-->
+                <Label
+                       x:Name="MaxLabel"
+                       Grid.Row="8"
+                       Grid.RowSpan="1"
+                       Grid.Column="3"
+                       Grid.ColumnSpan="1"
+                       Text="{Binding MaxLabelText}"
+                       HorizontalTextAlignment="Start"
+                       TextColor="White"
+                       FontSize="14"
+                       Margin="1,5"/>
+                <!--Title:Pressure-->
+                <Label
+                        Grid.Row="9"
+                        Grid.RowSpan="1"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="1"
+                        Text="Pressure:"
+                        HorizontalTextAlignment="Start"
+                        TextColor="White"
+                        FontSize="14"
+                        Margin="1,5"/>
+                <!--Value:Pressure-->
+                <Label
+                       x:Name="PressureLabel"
+                       Grid.Row="9"
+                       Grid.RowSpan="1"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="1"
+                       Text="{Binding PressureLabelText}"
+                       HorizontalTextAlignment="Start"
+                       TextColor="White"
+                       FontSize="14"
+                       Margin="1,5"/>
+                <!--Title:Humidity-->
+                <Label
+                        Grid.Row="9"
+                        Grid.RowSpan="1"
+                        Grid.Column="2"
+                        Grid.ColumnSpan="1"
+                        Text="Humidity:"
+                        HorizontalTextAlignment="Start"
+                        TextColor="White"
+                        FontSize="14"
+                        Margin="1,5"/>
+                <!--Value:Humidity-->
+                <Label
+                       x:Name="HumidityLabel"
+                       Grid.Row="9"
+                       Grid.RowSpan="1"
+                       Grid.Column="3"
+                       Grid.ColumnSpan="1"
+                       Text="{Binding HumidityLabelText}"
+                       HorizontalTextAlignment="Start"
+                       TextColor="White"
+                       FontSize="14"
+                       Margin="1,5"/>
+                <!--Header:Wind-->
+                <Label
+                       Grid.Row="10"
+                       Grid.RowSpan="1"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="4"
+                       Text="Wind"
+                       HorizontalTextAlignment="Center"
+                       TextColor="White"
+                       FontSize="20"
+                       Margin="1,5"/>
+                <!--Title:Speed-->
+                <Label
+                        Grid.Row="11"
+                        Grid.RowSpan="1"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="1"
+                        Text="Speed:"
+                        HorizontalTextAlignment="Start"
+                        TextColor="White"
+                        FontSize="14"
+                        Margin="1,5"/>
+                <!--Value:Speed-->
+                <Label
+                       x:Name="SpeedLabel"
+                       Grid.Row="11"
+                       Grid.RowSpan="1"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="1"
+                       Text="{Binding SpeedLabelText}"
+                       HorizontalTextAlignment="Start"
+                       TextColor="White"
+                       FontSize="14"
+                       Margin="1,5"/>
+                <!--Title:Degree-->
+                <Label
+                        Grid.Row="11"
+                        Grid.RowSpan="1"
+                        Grid.Column="2"
+                        Grid.ColumnSpan="1"
+                        Text="Degree:"
+                        HorizontalTextAlignment="Start"
+                        TextColor="White"
+                        FontSize="14"
+                        Margin="1,5"/>
+                <!--Value:Degree-->
+                <Label
+                       x:Name="DegreeLabel"
+                       Grid.Row="11"
+                       Grid.RowSpan="1"
+                       Grid.Column="3"
+                       Grid.ColumnSpan="1"
+                       Text="{Binding DegreeLabelText}"
+                       HorizontalTextAlignment="Start"
+                       TextColor="White"
+                       FontSize="14"
+                       Margin="1,5"/>
+                <!--Header:Twilight-->
+                <Label
+                       Grid.Row="12"
+                       Grid.RowSpan="1"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="4"
+                       Text="Twilight"
+                       HorizontalTextAlignment="Center"
+                       TextColor="White"
+                       FontSize="20"
+                       Margin="1,5"/>
+                <!--Title:Sunrise-->
+                <Label
+                        Grid.Row="13"
+                        Grid.RowSpan="1"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="1"
+                        Text="Sunrise:"
+                        HorizontalTextAlignment="Start"
+                        TextColor="White"
+                        FontSize="14"
+                        Margin="1,5"/>
+                <!--Value:Sunrise-->
+                <Label
+                       x:Name="SunriseLabel"
+                       Grid.Row="13"
+                       Grid.RowSpan="1"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="1"
+                       Text="{Binding SunriseLabelText}"
+                       HorizontalTextAlignment="Start"
+                       TextColor="White"
+                       FontSize="14"
+                       Margin="1,5"/>
+                <!--Title:Sunset-->
+                <Label
+                        Grid.Row="13"
+                        Grid.RowSpan="1"
+                        Grid.Column="2"
+                        Grid.ColumnSpan="1"
+                        Text="Sunset:"
+                        HorizontalTextAlignment="Start"
+                        TextColor="White"
+                        FontSize="14"
+                        Margin="1,5"/>
+                <!--Value:Sunset-->
+                <Label
+                       x:Name="SunsetLabel"
+                       Grid.Row="13"
+                       Grid.RowSpan="1"
+                       Grid.Column="3"
+                       Grid.ColumnSpan="1"
+                       Text="{Binding SunsetLabelText}"
+                       HorizontalTextAlignment="Start"
+                       TextColor="White"
+                       FontSize="14"
+                       Margin="1,5"/>
+            </Grid>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
+
