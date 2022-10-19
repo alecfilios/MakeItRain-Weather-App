@@ -3215,11 +3215,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/alexandrosfilios/Documents/Xamarin.Forms Apps/Weather App/MakeItRain/MakeItRain/MakeItRain.Android/MakeItRain.Android.csproj",
+      "projectUniqueName": "/Users/alexandrosfilios/Documents/GitHub/MakeItRain(Weather App)/MakeItRain/MakeItRain.Android/MakeItRain.Android.csproj",
       "projectName": "MakeItRain.Android",
-      "projectPath": "/Users/alexandrosfilios/Documents/Xamarin.Forms Apps/Weather App/MakeItRain/MakeItRain/MakeItRain.Android/MakeItRain.Android.csproj",
+      "projectPath": "/Users/alexandrosfilios/Documents/GitHub/MakeItRain(Weather App)/MakeItRain/MakeItRain.Android/MakeItRain.Android.csproj",
       "packagesPath": "/Users/alexandrosfilios/.nuget/packages/",
-      "outputPath": "/Users/alexandrosfilios/Documents/Xamarin.Forms Apps/Weather App/MakeItRain/MakeItRain/MakeItRain.Android/obj/",
+      "outputPath": "/Users/alexandrosfilios/Documents/GitHub/MakeItRain(Weather App)/MakeItRain/MakeItRain.Android/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -3234,8 +3234,8 @@
       "frameworks": {
         "monoandroid12.0": {
           "projectReferences": {
-            "/Users/alexandrosfilios/Documents/Xamarin.Forms Apps/Weather App/MakeItRain/MakeItRain/MakeItRain/MakeItRain.csproj": {
-              "projectPath": "/Users/alexandrosfilios/Documents/Xamarin.Forms Apps/Weather App/MakeItRain/MakeItRain/MakeItRain/MakeItRain.csproj"
+            "/Users/alexandrosfilios/Documents/GitHub/MakeItRain(Weather App)/MakeItRain/MakeItRain/MakeItRain.csproj": {
+              "projectPath": "/Users/alexandrosfilios/Documents/GitHub/MakeItRain(Weather App)/MakeItRain/MakeItRain/MakeItRain.csproj"
             }
           }
         }

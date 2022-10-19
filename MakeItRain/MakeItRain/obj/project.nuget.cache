@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KkEg7G+TMPZ+LJY6Z9RK/MbToANXOe2iICucoVQBsgytAn97q+CoiTqYN9SLCD0e+njvX/kcqeOb7XQg5ZuFkA==",
+  "dgSpecHash": "QhtS2YBQjn0RYitUmd/Q2kMiKlVW+G5oErMHGFi2/UBCiJ6YZ6AP8kw0+E49iyp0foAL9WYTpe3tDqxr8No6CQ==",
   "success": true,
-  "projectFilePath": "/Users/alexandrosfilios/Documents/Xamarin.Forms Apps/Weather App/MakeItRain/MakeItRain/MakeItRain/MakeItRain.csproj",
+  "projectFilePath": "/Users/alexandrosfilios/Documents/GitHub/MakeItRain(Weather App)/MakeItRain/MakeItRain/MakeItRain.csproj",
   "expectedPackageFiles": [
     "/Users/alexandrosfilios/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "/Users/alexandrosfilios/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
